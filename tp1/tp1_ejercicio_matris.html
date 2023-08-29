@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Página con Javascript</title>
+    <script language="javascript">
+        <!--
+        var nombres = new Array(); // Se declara la matriz.
+
+        /* A continuación se crean y declaran siete celdas. */
+        nombres[0] = "Nacho";
+        nombres[1] = "Arek";
+        nombres[2] = "Laura";
+        nombres[3] = "Sonia";
+        nombres[4] = "Gonzalo";
+        nombres[5] = "Eva";
+        nombres[6] = "Pedro";
+
+        /* Ahora se muestra el contenido de las celdas. */
+        for (var i = 0; i < nombres.length; i++) {
+            document.write(nombres[i] + "<br>");
+        }
+
+        /* A continuación se crea otra celda y luego se muestra su contenido. */
+        nombres[7] = "Manuel";
+        document.write(nombres[7] + "<br>");
+
+        /* Verificar si un nombre existe en la lista */
+        function verificarNombre() {
+            var nombreIngresado = prompt("Ingrese un nombre:", "");
+
+            if (nombreIngresado.charAt(0) !== nombreIngresado.charAt(0).toUpperCase()) {
+                alert("Por favor, utilice una mayúscula en la primera letra del nombre.");
+                return;
+            }
+
+            var encontrado = false;
+
+            for (var i = 0; i < nombres.length; i++) {
+                if (nombres[i] === nombreIngresado) {
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                document.write("El nombre " + nombreIngresado + " existe en la lista.<br>");
+            } else {
+                alert("Nombre no existe en la lista.");
+            }
+        }
+        //-->
+    </script>
+</head>
+<body>
+    <button onclick="verificarNombre();">Verificar Nombre</button>
+</body>
+</html>
